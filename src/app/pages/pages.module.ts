@@ -10,8 +10,7 @@ import {GrupoComponent} from './grupo/grupo.component';
 import {EstudianteComponent} from './estudiante/estudiante.component';
 import {DocenteComponent} from './docente/docente.component';
 import {EstrategiaComponent} from './estrategia/estrategia.component';
-import {ResgistrarComponent} from "./aula/resgistrar/resgistrar.component";
-import {AulaComponent} from "./aula/aula.component";
+import { AulaComponent } from './aula/aula.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +22,6 @@ import {AulaComponent} from "./aula/aula.component";
     EstudianteComponent,
     DocenteComponent,
     EstrategiaComponent,
-    ResgistrarComponent,
     AulaComponent
   ],
   exports: [
@@ -35,7 +33,6 @@ import {AulaComponent} from "./aula/aula.component";
     EstudianteComponent,
     DocenteComponent,
     EstrategiaComponent,
-    ResgistrarComponent,
     AulaComponent
   ],
   imports: [CommonModule, SharedModule, AppRoutingModule],

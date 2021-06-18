@@ -8,8 +8,9 @@ import {GrupoComponent} from "./grupo/grupo.component";
 import {EstudianteComponent} from "./estudiante/estudiante.component";
 import {DocenteComponent} from "./docente/docente.component";
 import {EstrategiaComponent} from "./estrategia/estrategia.component";
-import {AulaComponent} from "./aula/aula.component";
-import {ResgistrarComponent} from "./aula/resgistrar/resgistrar.component";
+import { ListarAulaComponent } from './aula/listar/listar-aula.component';
+import { RegistrarAulaComponent } from './aula/registrar-aula/registrar-aula.component';
+import { AulaComponent } from './aula/aula.component';
 
 const routes: Routes = [
   {
@@ -45,11 +46,16 @@ const routes: Routes = [
         component: EstrategiaComponent,
       },
       {
-        path: 'aula', component: AulaComponent,
+        path: 'aula',
+        component: AulaComponent,
         children: [
           {
             path:'registrar',
-            component: ResgistrarComponent
+            component: RegistrarAulaComponent
+          },
+          {
+            path: 'listar',
+            component: ListarAulaComponent
           }
         ]
       },
