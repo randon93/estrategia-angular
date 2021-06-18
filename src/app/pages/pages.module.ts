@@ -1,11 +1,17 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { BreadcrumbsComponent } from '../shared/breadcrumbs/breadcrumbs.component';
-import { GraficaUnoComponent } from './grafica-uno/grafica-uno.component';
-import { ProgressComponent } from './progress/progress.component';
-import { PagesComponent } from './pages.component';
-import { SharedModule } from '../shared/shared.module';
-import { AppRoutingModule } from '../app-routing.module';
+import {NgModule} from '@angular/core';
+import {CommonModule} from '@angular/common';
+import {BreadcrumbsComponent} from '../shared/breadcrumbs/breadcrumbs.component';
+import {GraficaUnoComponent} from './grafica-uno/grafica-uno.component';
+import {ProgressComponent} from './progress/progress.component';
+import {PagesComponent} from './pages.component';
+import {SharedModule} from '../shared/shared.module';
+import {AppRoutingModule} from '../app-routing.module';
+import {GrupoComponent} from './grupo/grupo.component';
+import {EstudianteComponent} from './estudiante/estudiante.component';
+import {DocenteComponent} from './docente/docente.component';
+import {EstrategiaComponent} from './estrategia/estrategia.component';
+import {ResgistrarComponent} from "./aula/resgistrar/resgistrar.component";
+import {AulaComponent} from "./aula/aula.component";
 
 @NgModule({
   declarations: [
@@ -13,13 +19,26 @@ import { AppRoutingModule } from '../app-routing.module';
     ProgressComponent,
     GraficaUnoComponent,
     PagesComponent,
+    GrupoComponent,
+    EstudianteComponent,
+    DocenteComponent,
+    EstrategiaComponent,
+    ResgistrarComponent,
+    AulaComponent
   ],
   exports: [
     BreadcrumbsComponent,
     ProgressComponent,
     GraficaUnoComponent,
     PagesComponent,
+    GrupoComponent,
+    EstudianteComponent,
+    DocenteComponent,
+    EstrategiaComponent,
+    ResgistrarComponent,
+    AulaComponent
   ],
   imports: [CommonModule, SharedModule, AppRoutingModule],
 })
-export class PagesModule {}
+export class PagesModule {
+}
