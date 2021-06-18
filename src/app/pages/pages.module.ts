@@ -10,7 +10,9 @@ import {GrupoComponent} from './grupo/grupo.component';
 import {EstudianteComponent} from './estudiante/estudiante.component';
 import {DocenteComponent} from './docente/docente.component';
 import {EstrategiaComponent} from './estrategia/estrategia.component';
-import { AulaComponent } from './aula/aula.component';
+import {AulaComponent} from './aula/aula.component';
+import {HttpClientModule} from "@angular/common/http";
+import {ListarAulaComponent} from "./aula/listar/listar-aula.component";
 
 @NgModule({
   declarations: [
@@ -22,7 +24,8 @@ import { AulaComponent } from './aula/aula.component';
     EstudianteComponent,
     DocenteComponent,
     EstrategiaComponent,
-    AulaComponent
+    AulaComponent,
+    ListarAulaComponent
   ],
   exports: [
     BreadcrumbsComponent,
@@ -33,9 +36,10 @@ import { AulaComponent } from './aula/aula.component';
     EstudianteComponent,
     DocenteComponent,
     EstrategiaComponent,
-    AulaComponent
+    AulaComponent,
+    ListarAulaComponent
   ],
-  imports: [CommonModule, SharedModule, AppRoutingModule],
+  imports: [CommonModule, SharedModule, AppRoutingModule, HttpClientModule]
 })
 export class PagesModule {
 }

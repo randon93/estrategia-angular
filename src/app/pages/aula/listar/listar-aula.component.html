@@ -1,1 +1,33 @@
-<p>listar works!</p>
+<div>
+  <h3>Lista de Aulas</h3>
+</div>
+
+<div class="row animated fadeIn fast"
+     *ngIf="cargando">
+  <div class="col-12">
+    <div class="alert alert-info text-center">
+      <h4 class="alert-heading"> Cargando... </h4>
+      <i class="fa fa-spin fa-refresh fa-2x"></i>
+      <p class="mb-0">Por favor espere</p>
+    </div>
+  </div>
+</div>
+
+<div >
+  <table class="table table-striped">
+    <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Nombre</th>
+      <th scope="col">Cant. Grupos</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let aula of aulas">
+      <td scope="row">{{aula.id}}</td>
+      <td>{{aula.nombre}}</td>
+      <td>{{aula.grupos.length}}</td>
+    </tr>
+    </tbody>
+  </table>
+</div>
