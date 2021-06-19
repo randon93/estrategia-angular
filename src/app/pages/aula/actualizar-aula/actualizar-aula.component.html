@@ -1,0 +1,105 @@
+<div class="row">
+  <div _ngcontent-esn-c31="" class="col-lg-6">
+    <div _ngcontent-esn-c31="" class="card">
+      <div _ngcontent-esn-c31="" class="card-body">
+        <h4 _ngcontent-esn-c31="" class="card-title">
+          Registro de Materia
+        </h4>
+        <form _ngcontent-esn-c31="" class="form p-t-20"
+              [formGroup]="formAula"
+              (submit)="actualizar()">
+          <div _ngcontent-esn-c31="" class="form-group">
+            <label _ngcontent-esn-c31=""
+            >Id</label
+            >
+            <div _ngcontent-esn-c31="" class="input-group">
+              <div _ngcontent-esn-c31="" class="input-group-addon">
+                <i _ngcontent-esn-c31="" class="ti-user"></i>
+              </div>
+              <input
+                _ngcontent-esn-c31=""
+                type="text"
+                placeholder="Username"
+                class="form-control"
+                formControlName="id"
+              />
+            </div>
+          </div>
+
+          <div _ngcontent-esn-c31="" class="form-group">
+            <label _ngcontent-esn-c31=""
+            >Nombre Materia</label
+            >
+            <div _ngcontent-esn-c31="" class="input-group">
+              <div _ngcontent-esn-c31="" class="input-group-addon">
+                <i _ngcontent-esn-c31="" class="ti-user"></i>
+              </div>
+              <input
+                _ngcontent-esn-c31=""
+                type="text"
+                placeholder="Username"
+                class="form-control"
+                formControlName="nombre"
+              />
+            </div>
+          </div>
+
+          <div _ngcontent-esn-c31="" class="form-group">
+            <label _ngcontent-esn-c31=""
+            >Grupos</label
+            >
+            <div _ngcontent-esn-c31="" class="input-group">
+              <div _ngcontent-esn-c31="" class="input-group-addon">
+                <i _ngcontent-esn-c31="" class="ti-user"></i>
+              </div>
+              <input
+                _ngcontent-esn-c31=""
+                type="text"
+                placeholder="Username"
+                class="form-control"
+                formControlName="grupos"
+              />
+            </div>
+          </div>
+
+          <button
+            _ngcontent-esn-c31=""
+            [disabled]="!formAula.valid"
+            type="submit"
+            class="btn btn-success waves-effect waves-light m-r-10"
+          >
+            Submit
+          </button
+          >
+          <button
+            _ngcontent-esn-c31=""
+            type="submit"
+            class="btn btn-inverse waves-effect waves-light"
+          >
+            Cancel
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+
+  <div _ngcontent-esn-c31="" class="col-lg-6">
+    <h3>Grupos</h3>
+    <table class="table table-striped">
+      <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Nombre</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let grupo of grupos">
+        <td scope="row">{{grupo.id}}</td>
+        <td scope="row">{{grupo.nombre}}</td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+
+

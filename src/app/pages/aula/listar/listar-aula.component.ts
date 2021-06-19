@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {AulaService} from "../aula.service";
 import {Aula} from "../model/aula";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-listar',
@@ -12,7 +13,7 @@ export class ListarAulaComponent implements OnInit {
   public aulas: Aula [] = [];
   public cargando: boolean = true;
 
-  constructor(private aulaService: AulaService) {
+  constructor(private aulaService: AulaService, private router: Router) {
   }
 
   ngOnInit(): void {
@@ -24,12 +25,22 @@ export class ListarAulaComponent implements OnInit {
     this.aulaService.cargarData()
       .subscribe(
         aulas => {
-          console.log(aulas);
           this.cargando = false;
           this.aulas = aulas;
-          console.log(this.aulas);
         }
-      )
+      );
   }
+
+  eliminar(id: number) {
+    this.aulaService.eliminar(id)
+      .subscribe();
+    this.router.navigateByUrl("/dashboard/aula/listar")
+  }
+
+  actualizar(aula: Aula) {
+    this.aulaService.aula = [aula]
+    this.router.navigateByUrl("/dashboard/aula/actualizar")
+  }
+
 
 }

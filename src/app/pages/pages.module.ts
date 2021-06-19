@@ -1,5 +1,4 @@
 import {NgModule} from '@angular/core';
-import {CommonModule} from '@angular/common';
 import {BreadcrumbsComponent} from '../shared/breadcrumbs/breadcrumbs.component';
 import {GraficaUnoComponent} from './grafica-uno/grafica-uno.component';
 import {ProgressComponent} from './progress/progress.component';
@@ -10,9 +9,8 @@ import {GrupoComponent} from './grupo/grupo.component';
 import {EstudianteComponent} from './estudiante/estudiante.component';
 import {DocenteComponent} from './docente/docente.component';
 import {EstrategiaComponent} from './estrategia/estrategia.component';
-import {AulaComponent} from './aula/aula.component';
 import {HttpClientModule} from "@angular/common/http";
-import {ListarAulaComponent} from "./aula/listar/listar-aula.component";
+import {AulaModule} from "./aula/aula.module";
 
 @NgModule({
   declarations: [
@@ -23,9 +21,7 @@ import {ListarAulaComponent} from "./aula/listar/listar-aula.component";
     GrupoComponent,
     EstudianteComponent,
     DocenteComponent,
-    EstrategiaComponent,
-    AulaComponent,
-    ListarAulaComponent
+    EstrategiaComponent
   ],
   exports: [
     BreadcrumbsComponent,
@@ -35,11 +31,13 @@ import {ListarAulaComponent} from "./aula/listar/listar-aula.component";
     GrupoComponent,
     EstudianteComponent,
     DocenteComponent,
-    EstrategiaComponent,
-    AulaComponent,
-    ListarAulaComponent
+    EstrategiaComponent
   ],
-  imports: [CommonModule, SharedModule, AppRoutingModule, HttpClientModule]
+  imports: [
+    SharedModule,
+    AppRoutingModule,
+    HttpClientModule,
+    AulaModule]
 })
 export class PagesModule {
 }

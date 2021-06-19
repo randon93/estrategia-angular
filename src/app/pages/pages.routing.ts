@@ -8,9 +8,6 @@ import {GrupoComponent} from "./grupo/grupo.component";
 import {EstudianteComponent} from "./estudiante/estudiante.component";
 import {DocenteComponent} from "./docente/docente.component";
 import {EstrategiaComponent} from "./estrategia/estrategia.component";
-import { ListarAulaComponent } from './aula/listar/listar-aula.component';
-import { RegistrarAulaComponent } from './aula/registrar-aula/registrar-aula.component';
-import { AulaComponent } from './aula/aula.component';
 
 const routes: Routes = [
   {
@@ -47,23 +44,8 @@ const routes: Routes = [
       },
       {
         path: 'aula',
-        component: AulaComponent,
-        children: [
-          {
-            path:'registrar',
-            component: RegistrarAulaComponent
-          },
-          {
-            path: 'listar',
-            component: ListarAulaComponent
-          }
-        ]
-      },
-      {
-        path: '',
-        redirectTo: '/dashboard',
-        pathMatch: 'full',
-      },
+        loadChildren: () => import('../pages/aula/aula.module').then(mod => mod.AulaModule),
+      }
     ],
   },
 ];

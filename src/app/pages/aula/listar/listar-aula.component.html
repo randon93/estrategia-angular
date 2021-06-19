@@ -1,4 +1,4 @@
-<div>
+<div class="m-2">
   <h3>Lista de Aulas</h3>
 </div>
 
@@ -13,13 +13,14 @@
   </div>
 </div>
 
-<div >
+<div>
   <table class="table table-striped">
     <thead>
     <tr>
       <th scope="col">#</th>
       <th scope="col">Nombre</th>
       <th scope="col">Cant. Grupos</th>
+      <th scope="col"></th>
     </tr>
     </thead>
     <tbody>
@@ -27,6 +28,19 @@
       <td scope="row">{{aula.id}}</td>
       <td>{{aula.nombre}}</td>
       <td>{{aula.grupos.length}}</td>
+      <td>
+        <button type="button" class="m-2 btn-info btn"
+                (click)="actualizar(aula)">
+          <i class="mdi mdi-lead-pencil"></i>
+        </button>
+        <button type="button"
+                class="m-2 btn-danger btn"
+                (click)="eliminar(aula.id)"
+                >
+          <i class="mdi mdi-delete-empty"></i>
+        </button>
+      </td>
+
     </tr>
     </tbody>
   </table>

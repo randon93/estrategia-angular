@@ -7,10 +7,11 @@ import { PagesModule } from './pages/pages.module';
 import { AppComponent } from './app.component';
 import { AuthModule } from './auth/auth.module';
 import { NoPageFoundComponent } from './no-page-found/no-page-found.component';
+import { AulaRoutingModule } from './pages/aula/aula-routing.module';
 
 @NgModule({
   declarations: [AppComponent, NoPageFoundComponent],
-  imports: [BrowserModule, AppRoutingModule, PagesModule, AuthModule],
+  imports: [BrowserModule, AppRoutingModule, PagesModule, AuthModule, AulaRoutingModule],
   providers: [],
   bootstrap: [AppComponent],
 })

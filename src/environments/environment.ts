@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  urlBase: 'http://35.232.153.199:8081'
+  urlBase: 'http://localhost:8081'
 };
 
 /*
